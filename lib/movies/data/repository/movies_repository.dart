@@ -1,9 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:entertain_me/core/error/exceptions.dart';
-import 'package:entertain_me/movies/data/data_source/movie_remote_data_source.dart';
-import 'package:entertain_me/movies/data/models/movie_model.dart';
-import 'package:entertain_me/movies/domain/entities/movie.dart';
-import 'package:entertain_me/movies/domain/repository/base_movies_repository.dart';
+import '../../../core/error/exceptions.dart';
+import '../data_source/movie_remote_data_source.dart';
+import '../models/movie_model.dart';
+import '../../domain/repository/base_movies_repository.dart';
 
 import '../../../core/error/failure.dart';
 

@@ -1,16 +1,19 @@
 import 'package:dartz/dartz.dart';
-import 'package:entertain_me/movies/domain/entities/movie.dart';
-import 'package:entertain_me/movies/domain/repository/base_movies_repository.dart';
+import '../../../core/usecase/base_usecase.dart';
+import '../repository/base_movies_repository.dart';
 
 import '../../../core/error/failure.dart';
 import '../../data/models/movie_model.dart';
 
-class GetPoularMoviesUseCase {
+class GetPopularMoviesUseCase
+    extends BaseUseCase<List<MovieModel>, NoParameters> {
   final BaseMoviesRepository baseMoviesRepository;
 
-  GetPoularMoviesUseCase(this.baseMoviesRepository);
+  GetPopularMoviesUseCase(this.baseMoviesRepository);
 
-  Future<Either<Failure, List<MovieModel>>> execute() async{
+  @override
+  Future<Either<Failure, List<MovieModel>>> call(
+      NoParameters parameters) async {
     return await baseMoviesRepository.getPopularMovies();
   }
 }

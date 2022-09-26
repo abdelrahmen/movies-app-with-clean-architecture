@@ -1,10 +1,8 @@
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:entertain_me/core/error/exceptions.dart';
-import 'package:entertain_me/core/error/failure.dart';
-import 'package:entertain_me/core/network/api_constants.dart';
-import 'package:entertain_me/core/network/error_message_model.dart';
-import 'package:entertain_me/movies/data/models/movie_model.dart';
+import '../../../core/error/exceptions.dart';
+import '../../../core/network/api_constants.dart';
+import '../../../core/network/error_message_model.dart';
+import '../models/movie_model.dart';
 
 abstract class BaseMovieRemoteDataSource {
   Future<List<MovieModel>> getNowPlayingMovies();
